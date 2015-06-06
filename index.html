@@ -1,0 +1,663 @@
+
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app18.us.archive.org";archive_analytics.values.server_ms=208;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.sarasota.k12.fl.us/pvs/index.html";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "27";
+var displayMonth = "Feb";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.sarasota.k12.fl.us/pvs/index.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150227091251" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20150108084142/http://www.sarasota.k12.fl.us/pvs/index.html" title="8 Jan 2015">JAN</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 9:12:51 Feb 27, 2015">FEB</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Mar
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20150108084142/http://www.sarasota.k12.fl.us/pvs/index.html" title="8:41:42 Jan 8, 2015"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 9:12:51 Feb 27, 2015">27</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140117100400/http://www.sarasota.k12.fl.us/pvs/index.html" title="17 Jan 2014"><strong>2014</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 9:12:51 Feb 27, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150227091251*/http://www.sarasota.k12.fl.us/pvs/index.html" title="See a list of every capture for this URL">92 captures</a>
+           <div class="r" title="Timespan for captures of this URL">11 May 01 - 27 Feb 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="500"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=500_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000010100000_2002:-1:010001010020_2003:-1:101000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000010001126_2007:-1:551123210001_2008:-1:000212043100_2009:-1:001000000100_2010:-1:110000001011_2011:-1:020000121111_2012:-1:104411110010_2013:-1:000000000110_2014:-1:100000101000_2015:1:210000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<em>
+<html>
+<head>
+<title>Welcome to Pine View School for the Gifted in Osprey, Florida</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META NAME="Author" CONTENT="Lyna Jimenez-Ruiz, Instructional Technology Coordinator">
+<META NAME="description" CONTENT="The website of Pine View School for the Gifted in Osprey, Florida.">
+<!---------DON'T FORGET TO UPDATE THESE TAGS-------------->
+<META NAME="keywords" CONTENT="keywords go here">
+<meta name="google-translate-customization" content="d862698c512a4691-52628f2fa079a886-g84bd98640e8471b9-1b"></meta>
+<link href="css/mainpage.css" rel="stylesheet" type="text/css">
+<link href="css/orange.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<!---------LOAD IN THE JAVA SCRIPTS THAT RUN THE MENU SYSTEM---------------------->
+<script language="JavaScript" type="text/JavaScript" src="java/menus.js"></script>
+<script language="JavaScript" type="text/javascript" src="java/main.js"></script>
+<script language="JavaScript" src="java/mm_menu.js"></script>
+<script language="JavaScript">
+<!-- Hide from old browsers
+var imagenumber = 2 ;
+var randomnumber = Math.random() ;
+var rand1 = Math.round( (imagenumber-1) * randomnumber) + 1 ;
+images = new Array
+images[1] = "images/box1.jpg"
+images[2] = "images/box2.jpg"
+var image = images[rand1]
+// -- End Hiding Here -->
+</script>
+<style type="text/css">
+<!--
+.style10 {
+	font-family: "Trebuchet MS";
+	font-size: 16px;
+	color:#666666;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #FFFF00;
+}
+a:active {
+	text-decoration: none;
+}
+.style12 {
+	font-weight: bold
+}
+.style10 em {
+	color: #000;
+}
+.style10 .style10 {
+	color: #F50A38;
+}
+.style10 em {
+	color: #F90D48;
+}
+.style10 .style10 strong {
+	color: #000;
+}
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!--
+
+<!--
+function go()
+{
+	box = document.forms[0].navi;
+	destination = box.options[box.selectedIndex].value;
+	if (destination) location.href = destination;
+}
+
+// -->
+//-->
+</SCRIPT>
+<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+</head>
+<!---------------BEIGN THE BODY OF THE PAGE----------------->
+<body>
+<!---------------CALLS THE MENU SCRIPT INTO EFFECT------------>
+<script language="JavaScript1.2" type="text/javascript">mmLoadMenus();</script>
+<FORM method="GET" action="/web/20150227091251/http://www.google.com/u/pineviewschool">
+<input type=hidden name=hq value="inurl:www.sarasota.k12.fl.us/pvs/">
+<table width="750" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+<tr>
+  <td><table width="750" border="0" cellpadding="0" cellspacing="0" bordercolor="#999999"  summary="This table contains the ENTIRE web page layout.">
+    <tr>
+      <td height="145" colspan="2"  background="images/header.jpg" alt="Header: Pine View School"><table width="750" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="images/pineViewBannerIdea.jpg" width="750" height="122"></td>
+          </tr>
+          <tr>
+            <td><table width="750" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="216"><!--<img src="images/welcome_tab.gif" width="216" height="23">--></td>
+                  <!-------------THE TAGS BELOW CALL THE MM MENU SCRIPTS INTO EFFECT WHEN THERE IS A ROLLOVER OF THE TAB PICTURES---------------->
+                  <td><a href="javascript:;" onMouseOver="MM_showMenu(window.mm_menu_0624131825_0,0,27,null,'Image5')" onMouseOut="MM_startTimeout();"><img src="images/about_tab.gif" alt="About PV" name="Image5" width="92" height="23" border="0" id="Image5"></a></td>
+                  <td><a href="javascript:;" onMouseOver="MM_showMenu(window.mm_menu_0624135151_0,0,27,null,'Image4')" onMouseOut="MM_startTimeout();"><img src="images/academics_tab.gif" alt="Academics" name="Image4" width="92" height="23" border="0" id="Image4"></a></td>
+                  <td><a href="javascript:;" onMouseOver="MM_showMenu(window.mm_menu_0624135834_0,0,27,null,'Image3')" onMouseOut="MM_startTimeout();"><img src="images/admissions_tab.gif" alt="Admissions" name="Image3" width="92" height="23" border="0" id="Image3"></a></td>
+                  <td><a href="javascript:;" onMouseOver="MM_showMenu(window.mm_menu_0624140600_0,0,27,null,'Image2')" onMouseOut="MM_startTimeout();"><img src="images/PVA_tab.gif" alt="Pine View Association" name="Image2" width="92" height="23" border="0" id="Image2"></a></td>
+                  <td><a href="javascript:;" onMouseOver="MM_showMenu(window.mm_menu_0624140831_0,0,27,null,'Image1')" onMouseOut="MM_startTimeout();"><img src="images/student_life_tab.gif" alt="Student Life" name="Image1" width="129" height="23" border="0" id="Image1"></a></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr>
+      <td height="2" colspan="2"><img src="images/shim.gif" alt="" width="1" height="1"></td>
+    </tr>
+    <tr bgcolor="192e63" background="images/shimdark.jpg">
+      <td height="13" colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="2" colspan="2"><img src="images/shim.gif" alt="" width="1" height="1"></td>
+    </tr>
+    <tr>
+      <td height="208" colspan="2" bgcolor="#EEEEEE"><!----------------BELOW IS THE IMG TAG FOR THE MAIN PAGE PICTURE---------------->
+        <script type="text/javascript">
+AC_FL_RunContent( 'width','750','height','200','align','baseline','title','panarama/Animatedbanner','src','panarama/Animatedbanner','quality','high','pluginspage','/web/20150227091251/http://www.macromedia.com/go/getflashplayer','wmode','transparent' ); //end AC code
+</script>
+        <noscript>
+        <a href="PDF/Equity Complaint">Equity Complaint</a><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="750" height="200" align="baseline" title="panarama/Animatedbanner">
+          <param name="SRC" value="PDF/Academics/panarama/Animatedbanner.swf">
+          <param name="quality" value="high">
+          <param name="wmode" value="transparent">
+          <embed src="PDF/Academics/panarama/Animatedbanner.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="750" height="200" wmode="transparent"></embed>
+        </object>
+        </noscript>
+        </script></td>
+    <tr>
+      <td height="2"><img src="images/bluebar2.gif" alt="" width="185" height="3"></td>
+    </tr>
+    <tr>
+      <!---------BEGINING OF THE CONTENT AREA TR IS DIRECTLY ABOVE-------->
+      <table border="0" cellpadding="0" cellspacing="0" width="750">
+        <td width="185" valign="top" align="center" bgcolor="#003399">
+        <img src="images/news-box-left.jpg" alt="" height="450" border="0" usemap="#Map">
+        <a href="PDF/StudentLife/JFCS &amp; TFC Children's Crisis Team Flier_9-23-2014.pdf"><img src="images/Childrens Crisis Center.png" width="185" height="26"></a>          
+
+         <map name="Map">
+            <area shape="rect" coords="2,129,117,154" href="Reaching_212.html" target="_blank">
+            <area shape="rect" coords="2,79,169,106" href="parentaccess.html" target="_blank">
+            <area shape="rect" coords="2,32,123,55" href="/web/20150227091251/http://www.sarasota.k12.fl.us/" target="_blank">
+            <area shape="rect" coords="2,56,94,78" href="PDF/Pine Views/Pine Views 2014 December - web version.pdf" target="_blank">
+            <area shape="rect" coords="4,305,173,330" href="TopRatedPage.html" target="_blank">
+            <area shape="rect" coords="99,98,100,100" href="pvalumni.html" target="_blank">
+<area shape="rect" coords="6,430,170,448" href="/web/20150227091251/http://doeweb-prd.doe.state.fl.us/eds/nclbspar/index.cfm" target="_blank">
+<area shape="rect" coords="480,411,481,494" href="#">
+<area shape="rect" coords="1,154,181,180" href="equityprocess.html" target="_blank">
+          <area shape="rect" coords="182,152,183,158" href="equityprocess.html" target="_blank">
+          <area shape="rect" coords="2,180,177,203" href="Latest Accomplishments.html" target="_blank">
+          <area shape="rect" coords="1,105,141,126" href="PDF/Weekly Activities/Activities Cal0223.pdf" target="_blank">
+          <area shape="rect" coords="2,411,185,431" href="/web/20150227091251/http://www.sarasotacountyschools.net/departments/pupilsupportservices/default.aspx?id=44336" target="_blank">
+          </map>
+          </td>
+          <td width="385" valign="top" bgcolor="#FFFFFF" class="secheader">
+            <p><STRONG>ATTENTION HIGH SCHOOLSENIORS AND PARENTS: Students in the graduating class of   2015 must have taken and passed an online course to meet state graduation   requirements</STRONG>. Any high school senior who has not met this requirement   should meet with his/her school counselor as soon as possible and sign up for a   Sarasota Virtual Academy course. Please note that this online course requirement   does not apply to any senior who is pursuing an IB or AICE diploma. </p>
+            <p><STRONG>Please note that the last day to sign up for a required online course   through Sarasota Virtual Academy will be Tuesday, March 31, 2015.</STRONG> If   you are a senior with questions about whether you have met this online   graduation requirement, or if you have questions about how to sign up for an   online course, please contact your school counselor or an administrator   immediately.                        </p>
+            <h3>News:</h3>
+          <ul>
+            <li><a href="/web/20150227091251/http://preps.heraldtribune.com/2015/02/05/htpreps-area-girls-cross-country/" class="link5">Pine View Senior Named Girls Cross Country Runner of the Year</a></li>
+            <li><a href="/web/20150227091251/http://www.mysuncoast.com/news/local/make-a-wish-foundation-surprises-sarasota-teen-with-trip-to/article_ab40386c-a7f5-11e4-8809-6b68fb09c147.html" class="link5" target=_blank>Make-A-Wish Foundation Surprises Pine View Teen</a></li>
+            <li><a href="/web/20150227091251/http://www.sarasotacountyschools.net/departments/communications/newsroom.aspx?id=62270&amp;blogid=868" class="link5">Pine View Senior Awarded Fellowship</a></li>
+          </ul>
+          <h3>2015-2016 Course Information <br>
+            Now Available!</h3>
+          <ul>
+            <li><a href="PDF/Course Descriptions/PineViewCourseDescriptionBook2015.pdf">Pine View Course Description Book2015</a></li>
+            <li><a href="PDF/Course Descriptions/CourseSelectionsSheet2015.pdf">Course Selections Sheet 2015</a></li>
+          </ul>
+           <hr>
+            <h3 align=center>Attention Seniors!</h3>
+            <p>As in the past, all seniors need to complete any  online class (completed and graded &ndash; transcripts to Pine View) one week ahead of  senior activities in which they wish to participate.&nbsp;This applies to  courses that are <u>graduation requirements.</u> We recommend students set a  date for themselves that is approximately one week before our date.&nbsp; This  allows their teachers time to grade everything and get the transcripts to Pine  View.</p>
+            <p>The deadlines for this year are as follows:</p>
+            <ul>
+              <li>Grad Bash, Saturday April 25th: Completion date Friday April  17th</li>
+              <li>Cobalt, Saturday May 9th: Completion date Friday May 1st</li>
+              <li>Graduation, Sunday May 31st: Completion date Monday  May 18th</li>
+            </ul>
+            <p><br clear=all>
+            </p>
+            <p align=center>
+          <p align=center><a href="Updates2014Fall.html" class="link5">Recent Updates to Pine View Website</a></td>
+        <td width="177" align="center" valign="top" background="images/shimmid.jpg"><div id="calendar"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                
+                <td id="month" colspan="7"><p><span class="secheader">February 2015
+                  </span><br>
+                </p></td>
+                
+              </tr>
+              <tr>
+                <td height="26" class="weekdays"><span class="crumb">S</span></td>
+                <td width="15%" class="weekdays"><span class="crumb">M</span></td>
+                <td width="14%" class="weekdays"><span class="crumb">T</span></td>
+                <td width="14%" class="weekdays"><span class="crumb">W</span></td>
+                <td width="14%" class="weekdays"><span class="crumb">T</span></td>
+                <td width="14%" class="weekdays"><span class="crumb">F</span></td>
+                <td class="weekdays"><span class="crumb">S</span></td>
+              </tr>
+              
+              <tr>
+                <td height="22" class="date">1</td>
+                
+                <td class="date"><a href="PDF/Announcements/0202.pdf" target="_blank"><font color=blue>2</font></a></td>
+                
+                <td class="date"><a href="PDF/Announcements/0203.pdf" target="_blank"><font color=blue>3</font></a></td>
+                <td class="date"><a href="PDF/Announcements/0204.pdf" target="_blank"><font color=blue>4</font></a></td>
+                <td class="date"><a href="PDF/Announcements/0205.pdf" target="_blank"><font color=blue>5</font></a></td>
+              <td class="date"><a href="PDF/Announcements/0206.pdf" target="_blank"><font color=blue>6</font></a></td>
+              <td class="date">7</td></tr>
+              <tr>
+            <td class="date">8</td>
+            <td class="date"><a href="PDF/Announcements/0209.pdf" target="_blank"><font color=blue>9</font></a></td>
+            <td class="date"><a href="PDF/Announcements/0210.pdf" target="_blank"><font color=blue>10</font></a></td>
+            <td class="date"><a href="PDF/Announcements/0211.pdf" target="_blank"><font color=blue>11</font></a></td>
+            <td class="date"><a href="PDF/Announcements/0212.pdf" target="_blank"><font color=blue>12</font></a></td>
+            <td class="date"><a href="PDF/Announcements/0213.pdf" target="_blank"><font color=blue>13</font></a></td>
+            <td class="date">14</td>
+            </tr><tr>
+            <td class="date">15</td>
+            <td class="date">16</td>
+            <td class="date"><a href="PDF/Announcements/0217.pdf" target="_blank"><font color=blue>17</font></a></td>
+            <td class="date"><a href="PDF/Announcements/0218.pdf" target="_blank"><font color=blue>18</font></a></td>
+            <td class="date"><a href="PDF/Announcements/0219.pdf" target="_blank"><font color=blue>19</font></a></td>
+            <td class="date"><a href="PDF/Announcements/0220.pdf" target="_blank"><font color=blue>20</font></a></td>
+            <td class="date">21</td>
+            </tr><tr>
+            <td class="date">22</td>
+            <td class="date"><a href="PDF/Announcements/0223.pdf" target="_blank"><font color=blue>23</font></a></td>
+            <td class="date"><a href="PDF/Announcements/0224.pdf" target="_blank"><font color=blue>24</font></a></td>
+            <td class="date"><a href="PDF/Announcements/0225.pdf" target="_blank"><font color=blue>25</font></a></td>
+            <td class="date"><a href="PDF/Announcements/0226.pdf" target="_blank"><font color=blue>26</font></a></td>
+            <td class="date">27</td>
+            <td class="date">28</td>
+            </tr><tr>
+            <td class="date">&nbsp;</td>
+            <td class="date">&nbsp;</td>
+            <td class="date">&nbsp;</td>
+            <td class="date">&nbsp;</td>
+            <td class="date">&nbsp;</td>
+            <td class="date">&nbsp;</td>
+            <td class="date">&nbsp;</td>
+            </tr>
+            </table>
+        </div>
+          <center>
+            <span class="style10">Click on the blue date for Daily Announcements</span>
+          </center>
+          <p><br>
+            <center>
+            <span class="style10"> Website by Teacher:<br>
+            </span> </p>
+<form name="example" target="_blank">
+  <select name=navi onChange="go()">
+    <option value="#" selected>Teacher</option>
+    <option value="http://www.myteacherpages.com/webpages/MAckroyd/">Ackroyd</option>
+    <option value="http://teachersites.schoolworld.com/webpages/FAmes/">Ames</option>
+    <option value="http://teachersites.schoolworld.com/webpages/DAndrew/">Andrew</option>
+    <option value="http://teachersites.schoolworld.com/webpages/PhysEd/">Ballard</option>
+    <option value="http://teacherweb.com/FL/PineViewSchoolfortheGifted/Bradly/">Banes-Bradly</option>
+    <option value="http://teacherweb.com/FL/PineViewSchoolfortheGifted/PeggyBarber/">Barber</option>
+    <option value="http://www.myteacherpages.com/webpages/LBergman1/">Bergman</option>
+    <option value="http://www.judyblack.50megs.com">Black, J</option>
+    <option value="http://www.myteacherpages.com/webpages/CBraun1/">Braun</option>
+    <option value="http://teachersites.schoolworld.com/webpages/KCangero/">Cangero</option>
+    <option value="http://www.teacherweb.com/FL/PineViewSchoolfortheGifted/Chaillou,Stacey/newsflash.aspx">Chaillou</option>
+    <option value="http://teachersites.schoolworld.com/webpages/PChapman/">Chapman</option>
+    <option value="http://www.myteacherpages.com/webpages/MCondiotte/index.cfm">Condiotte</option>
+    <option value="http://teachersites.schoolworld.com/webpages/KCookerly/">Cookerly</option>
+    <option value="http://teacherweb.com/FL/PineViewSchoolfortheGifted/CaraCrowley/apt1.aspx">Crowley</option>
+    <option value="http://teachersites.schoolworld.com/webpages/DCurry/">Curry</option>
+    <option value="http://teacherweb.com/FL/PineViewSchoolfortheGifted/MrDacey">Dacey</option>
+    <option value="http://teachersites.schoolworld.com/webpages/JDavidsmeyer/">Davidsmeyer</option>
+    <option value="http://teachersites.schoolworld.com/webpages/KDeMichieli/">DeMichieli</option>
+    <option value="http://www.myteacherpages.com/webpages/PDean/myhomework.cfm">Dean</option>
+    <option value="http://teachersites.schoolworld.com/webpages/DDelaney1/">Delaney, David</option>
+    <option value="http://teachersites.schoolworld.com/webpages/DDelaney/">Delaney, Debbie</option>
+    <option value="http://teachersites.schoolworld.com/webpages/CDeVeau/">DeVeau</option>
+    <option value="http://teachersites.schoolworld.com/webpages/PDeVerna/">DeVerna</option>
+    <option value="http://teachersites.schoolworld.com/webpages/PhysEd/">DiGiacomo</option>
+    <option value="http://teachersites.schoolworld.com/webpages/MDrown/">Drown</option>
+    <option value="http://teachersites.schoolworld.com/webpages/MFairchild/">Fairchild</option>
+    <option value="http://teachersites.schoolworld.com/webpages/HFlahavan/">Flahavan</option>
+    <option value="http://teachersites.schoolworld.com/webpages/SFolts/">Folts</option>
+    <option value="http://teachersites.schoolworld.com/webpages/SFong/">Fong</option>
+    <option value="http://teachersites.schoolworld.com/webpages/JFrancis/">Francis</option>
+    <option value="http://teachersites.schoolworld.com/webpages/NFriedland/index.cfm">Friedland</option>
+    <option value="http://teachersites.schoolworld.com/webpages/DFugere/">Fugere</option>
+    <option value="http://teachersites.schoolworld.com/webpages/VGallo/">Gallo</option>
+    <option value="http://teachersites.schoolworld.com/webpages/CGannon/">Gannon</option>
+    <option value="http://teachersites.schoolworld.com/webpages/KGarvin/">Garvin</option>
+    <option value="http://teachersites.schoolworld.com/webpages/PGerlek-Rzepka/">Gerlek-Rzepka </option>
+    <option value="http://new.schoolnotes.com/xpages/view/103743/1">Gieseke</option>
+    <option value="http://www.sarasota.k12.fl.us/gleitz/">Gleitz</option>
+    <option value="http://www.teacherweb.com/FL/PineViewSchoolfortheGifted/mrgoebel/h1.aspx">Goebel</option>
+    <option value="http://teachersites.schoolworld.com/webpages/MGorman/">Gorman</option>
+    <option value="http://teachersites.schoolworld.com/webpages/SGould-Olson/">Gould-Olson</option>
+    <option value="http://teachersites.schoolworld.com/webpages/SGrandusky/">Grandusky</option>
+    <option value="http://myteacherpages.com/webpages/sgrantham">Grantham</option>
+    <option value="http://teachersites.schoolworld.com/webpages/NGreig/index.cfm?subpage=1243852">Greig</option>
+    <option value="http://teachersites.schoolworld.com/webpages/KGuay/">Guay</option>
+    <option value="http://teachersites.schoolworld.com/webpages/EGullick/">Gullick</option>
+    <option value="http://www.teacherWeb.com/FL/PineViewSchoolfortheGifted/MsHershberger/">Hershberger</option>
+    <option value="http://teachersites.schoolworld.com/webpages/CHollar/">Hollar</option>
+    <option value="http://teachersites.schoolworld.com/webpages/RJagdish/">Jagdish</option>
+    <option value="http://teachersites.schoolworld.com/webpages/SJankovsky/index.cfm">Jankovsky</option>
+    <option value="http://teachersites.schoolworld.com/webpages/TJohnsonPV/">Johnson</option>
+    <option value="http://teachersites.schoolworld.com/webpages/PJohnston1/">Johnston</option>
+    <option value="http://teachersites.schoolworld.com/webpages/KJukes/index.cfm?subpage=1225911">Jukes</option>
+    <option value="http://teachersites.schoolworld.com/webpages/RKaminske/">Kaminske</option>
+    <option value="http://teachersites.schoolworld.com/webpages/LKarr/">Karr </option>
+    <option value="http://teachersites.schoolworld.com/webpages/AKeiper-Wilson/">Keiper-Wilson </option>
+    <option value="http://teachersites.schoolworld.com/webpages/KKrejnik/">Krejnik</option>
+    <option value="http://www.myteacherpages.com/webpages/RetsyLauer/">Lauer</option>
+    <option value="http://teachersites.schoolworld.com/webpages/ALazareva/">Lazareva</option>
+    <option value="http://teachersites.schoolworld.com/webpages/CLenerz/">Lenerz</option>
+    <option value="http://teachersites.schoolworld.com/webpages/NLight/">Light</option>
+    <option value="http://teachersites.schoolworld.com/webpages/JLin/">Lin</option>
+    <option value="http://teachersites.schoolworld.com/webpages/MMagenheim/">Magenheim</option>
+    <option value="http://www.myteacherpages.com/webpages/MMalkerson/">Malkerson</option>
+    <option value="http://www.myteacherpages.com/webpages/WMancera/">Mancera</option>
+    <option value="http://teachersites.schoolworld.com/webpages/CMarcelloPV/">Marcello</option>
+    <option value="http://teachersites.schoolworld.com/webpages/PhysEd/">Maurer</option>
+    <option value="http://teachersites.schoolworld.com/webpages/MMcBride/index.cfm">McBride</option>
+    <option value="http://teachersites.schoolworld.com/webpages/FMcClellan/">McClellan</option>
+       <option value="http://teachersites.schoolworld.com/webpages/RobinMelton">Melton</option>
+    <option value="http://teachersites.schoolworld.com/webpages/JMichalojko/">Michalojko</option>
+    <option value="http://teachersites.schoolworld.com/webpages/HMiklautsch/contact.cfm">Miklautsch</option>
+    <option value="http://www.myteacherpages.com/webpages/Jason_Miller1/">Miller, J.</option>
+    <option value="http://teachersites.schoolworld.com/webpages/LMiller/">Miller, L.</option>
+    <option value="http://teachersites.schoolworld.com/webpages/VMongillo/">Mongillo, V.</option>
+    <option value="http://www.teacherweb.com/FL/PineViewSchoolfortheGifted/MrsJennaMolinaro/">Molinaro</option>
+    <option value="http://teachersites.schoolworld.com/webpages/NMoschberger/">Moschberger</option>
+    <option value="http://www.myteacherpages.com/webpages/LMoyer ">Moyer</option>
+    <option value="http://teachersites.schoolworld.com/webpages/SMurray09/">Murray</option>
+    <option value="http://teachersites.schoolworld.com/webpages/LMyers/index.cfm">Myers</option>
+    <option value="http://teachersites.schoolworld.com/webpages/KNadeau/">Nadeau</option>
+    <option value="http://teachersites.schoolworld.com/webpages/DNezelek/">Nezelek</option>
+    <option value="http://teachersites.schoolworld.com/webpages/CO'Connors/">O'Connors</option>
+    <option value="http://teachersites.schoolworld.com/webpages/MO'Mahony/">O'Mahony</option>
+    <option value="http://www.orschemistry.com/">Ors</option>
+    <option value="http://sarasotaschools.us/Pauling/">Pauling</option>
+    <option value="http://cpercival.googlepages.com/">Percival</option>
+    <option value="http://www.myteacherpages.com/webpages/LPerez/">Perez</option>
+    <option value="http://teachersites.schoolworld.com/webpages/KQuinn/">Quinn</option>
+    <option value="http://www.myteacherpages.com/webpages/PRegan/">Regan</option>
+    <option value="http://www.pjr-pvs.com">Rice</option>
+    <option value="http://www.myteacherpages.com/webpages/CRienhoff/">Rienhoff</option>
+    <option value="http://www.myteacherpages.com/webpages/RRingo/">Ringo</option>
+    <option value="http://www.myteacherpages.com/webpages/LRobins1/">Robins, L</option>
+    <option value="http://teacherweb.com/FL/PineViewSchoolfortheGifted/Ross/">Ross</option>
+    <option value="http://teachersites.schoolworld.com/webpages/LJimenez-Ruiz/">Ruiz</option>
+    <option value="http://www.myteacherpages.com/webpages/SSalzman/">Salzman</option>
+    <option value="http://teachersites.schoolworld.com/webpages/MSand/">Sand</option>
+    <option value="http://teachersites.schoolworld.com/webpages/DSchell/">Schell</option>
+    <option value="http://teachersites.schoolworld.com/webpages/JSchran/">Schran</option>
+    <option value="http://teachersites.schoolworld.com/webpages/JSchweig/">Schweig</option>
+    <option value="http://teachersites.schoolworld.com/webpages/KSeidell/">Seidell</option>
+    <option value="http://teachersites.schoolworld.com/webpages/AdamSeider/">Seider, Adam</option>
+    <option value="http://www.myteacherpages.com/webpages/PVShannon/">Shannon</option>
+<option value="http://teachersites.schoolworld.com/webpages/KNelson2/">Shepler</option>    <option value="http://www.myteacherpages.com/webpages/PVYearbook/">Shannon-Yearbook</option>
+    <option value="http://teachersites.schoolworld.com/webpages/SShea/">Shea</option>
+    <option value="http://www.sarasota.k12.fl.us/siegelr/">Siegel</option>
+    <option value="http://teachersites.schoolworld.com/webpages/Asimon/">Simon</option>
+    <option value="http://www.myteacherpages.com/webpages/SkipperJ/">Skipper</option>
+    <option value="http://teachersites.schoolworld.com/webpages/KSnowdon/">Snowdon</option>
+    <option value="http://teachersites.schoolworld.com/webpages/TSpielman/">Spielman</option>
+    <option value="http://teachersites.schoolworld.com/webpages/MSpies/index.cfm">Spies</option>
+    <option value="http://teachersites.schoolworld.com/webpages/FSquires/">Squires</option>
+    <option value="http://teachersites.schoolworld.com/webpages/CSteele/index.cfm">Steele</option>
+    <option value="http://teachersites.schoolworld.com/webpages/EStumpf/index.cfm">Stumpf</option>
+    <option value="http://teachersites.schoolworld.com/webpages/BTempleton/">Templeton</option>
+    <option value="http://teachersites.schoolworld.com/webpages/PhysEd/">Thorpe</option>
+    <option value="http://teachersites.schoolworld.com/webpages/ATirabassi/">Tirabassi</option>
+    <option value="https://learn2.sarasota.k12.fl.us/">Torres</option>
+    <option value="http://teachersites.schoolworld.com/webpages/MTucak/">Tucak</option>
+    <option value="http://www.myteacherpages.com/webpages/KTucker/">Tucker</option>
+    <option value="http://teachersites.schoolworld.com/webpages/KVanderee/">Vanderee</option>
+    <option value="http://teachersites.schoolworld.com/webpages/KVest/">Vest</option>
+     <option value="http://teachersites.schoolworld.com/webpages/TVillacis/">Villacis</option>
+    <option value="http://teachersites.schoolworld.com/webpages/CWajda/">Wajda</option>
+    <option value="http://www.myteacherpages.com/webpages/KWang/">Wang</option>
+    <option value="http://www.teacherweb.com/FL/PineViewSchoolfortheGifted/MrsWhite/">White</option>
+    <option value="http://www.myteacherpages.com/webpages/BWiley/index.cfm?subpage=224881/">Wiley</option>
+    <option value="http://teachersites.schoolworld.com/webpages/JWise/index.cfm
+">Wise</option>
+    <option value="http://www.myteacherpages.com/webpages/Wolfinger/">Wolfinger</option>
+    <option value="http://teacherweb.com/FL/PineViewSchoolfortheGifted/MrDYotsuda/h0.aspx">Yotsuda</option>
+    <option value="http://teachersites.schoolworld.com/webpages/PZdravkovich/">Zdravkovich</option>
+  </select>
+</form>
+<br>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="/web/20150227091251js_/http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</center>
+</td>
+</table>
+<!-------END OF THE CONTENT AREA TR IS DIRECTLY BELOW----------->
+</tr>
+<!-- <tr>
+
+          <td height="2" colspan="2"><img src="images/shim.gif" alt="" width="1" height="1"></td>
+
+        </tr>-->
+<tr bgcolor="#CCCCCC">
+  <td height="33" colspan="2"><div align="center" class="news">
+    <p><img src="images/footer_address.gif" width="750" height="33" border="0"></p>
+    <p>Under Florida law, e-mail addresses are public records. If you do not want your e-mail address released in response to a public records request, do not send electronic mail to this entity. Instead, contact this office by phone or in writing. </p>
+    <p><br>
+    </p>
+  </div></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</form>
+<table width="755" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top" bgcolor="#FFFFFF"><p class="copyright"> <br>
+        &copy; Copyright 2007-2014. Pine View School </p>
+      <br></td>
+  </tr>
+</table>
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=1370388; 
+var sc_invisible=1; 
+var sc_partition=12; 
+var sc_security="41e2d418"; 
+</script>
+<script type="text/javascript" language="javascript" src="/web/20150227091251js_/http://www.statcounter.com/counter/counter.js"></script>
+<noscript>
+<a href="/web/20150227091251/http://www.statcounter.com/" target="_blank"><img  src="/web/20150227091251im_/http://c13.statcounter.com/counter.php?sc_project=1370388&amp;java=0&amp;security=41e2d418&amp;invisible=1" alt="free log" border="0"></a>
+</noscript>
+<!-- End of StatCounter Code -->
+</body>
+</html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 9:12:51 Feb 27, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 0:11:56 Jun 6, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,131 @@
+a.link1:link { color: #666666; text-decoration: none; }
+a.link1:active { color: #666666; text-decoration: none; }
+a.link1:visited { color: #666666; }
+a.link1:hover { color: #333333; }
+a.link2:link { color: #003366; text-decoration: none; }
+a.link2:active { color: #003366; text-decoration: none; }
+a.link2:visited { color: #003366; }
+a.link2:hover { color: #000033; }
+a.link3:link { color: #cc0000; text-decoration: none; }
+a.link3:active { color: #cc0000; text-decoration: none; }
+a.link3:visited { color: #cc0000; }
+a.link3:hover { color: #990000; }
+a.link4:link { color: #003366; text-decoration: underline; font-weight: bold; }
+a.link4:active { color: #003366; text-decoration: underline; font-weight: bold; }
+a.link4:visited { color: #003366; text-decoration: underline; font-weight: bold; }
+a.link4:hover { color: #000033; text-decoration: underline; font-weight: bold; }
+a.link5:link { color: #666666; text-decoration: underline; }
+a.link5:active { color: #666666; text-decoration: underline; }
+a.link5:visited { color: #666666; text-decoration: underline; }
+a.link5:hover { color: #999999; text-decoration: underline; }
+a.crumb:link { color: #666666; text-decoration: none; }
+a.crumb:active { color: #666666; text-decoration: none; }
+a.crumb:visited { color: #666666; text-decoration: none; }
+a.crumb:hover { color: #999999; text-decoration: none; }
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+body {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-image: url(../images/bg.jpg);
+	background-repeat: repeat-x;
+
+}
+.style3 {font-size: 11px}
+.style4 {font-size: 9.5px}
+.top {font-family:Arial, Helvetica, sans-serif; font-size:xx-small; color:#FFFFFF; font-weight:bold}
+
+.news {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 14px;
+	font-weight: normal;
+	font-variant: normal;
+	color: #003366;
+}
+
+.newshead {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#FFFFFF;
+	font-size: 10px;
+}
+
+.calendar {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10;
+	line-height: 14px;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: #003366;
+}
+.date {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 14px;
+	font-weight: bolder;
+	color: #003366;
+}
+.menu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 4px;
+	font-weight: bold;
+	color: #666666;
+	font-variant: normal;
+	text-transform: none;
+}
+.rules {
+	color: #003366;
+}
+.copyright {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	line-height: 10px;
+	font-weight: normal;
+	color: #666666;
+}
+
+.date2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bolder;
+	color: #003366;
+	text-transform: uppercase;
+}
+.weather {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: bold;
+	color: #003366;
+}
+.textheader {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+}
+.bodytext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	color: #000000;
+	list-style-type: square;
+}
+.secheader {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+}
